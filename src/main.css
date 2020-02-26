@@ -1,0 +1,183 @@
+* 
+{
+    padding: 0;
+    margin: 0;
+}
+body 
+{
+    background-color: #16181b;
+    color: white;
+}
+h1 
+{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5rem;
+}
+p, .calc-btn
+{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+}
+.container 
+{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 2fr 0.3fr;
+    grid-template-areas: 
+    "header header"
+    "main main"
+    "footer footer"
+    ;
+}
+.header 
+{
+    grid-area: header;
+    text-align: center;
+    padding: 20px;
+}
+.main 
+{
+    text-align: center;
+    grid-area: main;
+
+}
+.footer 
+{
+    grid-area: footer;
+    background-color: #191e24;
+}
+.logo
+{
+    width: 15rem;
+    height: auto;
+}
+.project-info{
+    text-align: center;
+    margin: 20px;
+    padding: 0px 20px 0px 20px;
+}
+.project-info a
+{
+    text-decoration: none;
+    color: #8743cc;
+}
+.project-info a:active{
+    color: #8743cc;
+}
+.card
+{
+    z-index: 100;
+    background-color: #191e24;
+    padding: 50px;
+    margin: 5px;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.144);
+    box-shadow: 5px -5px 10px #8743cc1f;
+    transition: transform 0.5s;
+    text-align: center;
+}
+.card:hover 
+{
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+    border: 1px solid #8743cc;
+    /* box-shadow: 5px -5px 20px #8743cc; */
+    /* animation: shadow_change 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite; */
+}
+.card input 
+{   
+    text-align: center;
+    padding: 5px;
+    margin: 10px 0px;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+.invalid {
+    color: red;
+    border-color: red;
+}
+.card input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button 
+{ 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+.card img 
+{
+    margin-bottom: 20px;
+}
+.card-info
+{
+    position: absolute;
+    z-index: -1;
+    display: none;
+    background-color: white;
+    color: black;
+    border: 1px solid rgba(255, 255, 255, 0.144);
+    border-radius: 10px;
+}
+
+/* RESULTADO */
+.result
+{
+    margin: 20px;
+}
+.result h1
+{
+    display: inline;
+    color: #8743cc;
+}
+.result_none
+{
+    display: none;
+}
+.result_block
+{
+    display: block;
+    animation: fade_in 0.5s ease-in;
+}
+.calc-btn
+{
+    padding: 10px;
+    margin: 20px;
+    background-color: transparent;
+    color: white;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.144);
+    transition: transform 0.5s;
+}
+.calc-btn:hover
+{
+    border: 1px solid #8743cc;
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+    animation: btn_click 0.5s ease-in;
+}
+
+
+/* ANIMATIONS */
+@keyframes btn_click
+{
+    from
+    {
+        background-color:#8743cc;
+    }
+}
+@keyframes fade_in
+{
+    from
+    {
+        font-size: 0;
+        opacity: 0;
+    }
+    to
+    {
+        font-size: 1;
+        opacity: 1;
+    }
+}

@@ -5,10 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Calculadora de Freela - He4rtDevs</title>
     <link rel="stylesheet" href="./main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Quicksand&display=swap" rel="stylesheet">
   </head>
   <body>
-    <div>
-      <h1>Olá mundo.</h1>
+    <div class="container">
+      <div class="header">
+        <img src="./images/logo-he4rt2.png" alt="" class="logo">
+        <h1 class="title">Calculadora de Freelas</h1>
+      </div>
+      <div class="main">
+        <div class="project-info">
+          <p>
+            Este projeto é um desafio da <a href="http://heartdevs.com/" target="_blank">He4rtDevelopers</a> e tem como finalidade a criação de
+            uma Calculadora de Freelances, levando em consideração 4 variáveis para a determinação
+            do valor a ser cobrado por hora. 
+          </p>
+        </div>
+        <div class="card">
+          <img src="./images/compromisso.png" height="32px" alt="">
+          <section>
+            <p>Dias de trabalho</p>
+          </section>
+          <input type="number"  class="variables_input" min="0"  name="" id="days">
+        </div> 
+        <div class="card">
+          <img src="./images/relogio.png" value="2" height="32px" alt="">
+          <section>
+            <p>Horas diárias</p>
+          </section>
+          <input type="number" class="variables_input" min="0"  name="" id="hours">
+        </div>
+        <div class="card">
+          <img src="images/guarda-sol.png"" height="32px" alt="">
+          <section>
+            <p>Dias de Férias</p>
+          </section>
+          <input type="number" class="variables_input" min="0"  name="" id="days_off">
+        </div>
+        <div class="card">
+          <img src="./images/dinheiro.png" height="32px" alt="">
+          <section>
+            <p>Valor do Projeto</p>
+          </section>
+          <input type="number" class="variables_input" min="0"  name="" id="total">
+        </div>
+        <div class="result">
+          <div class="result_none result_box">
+            <h1 class="result_text"></h1>
+          </div>
+          <div class="calculate">
+            <button class="calc-btn">CALCULAR</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer"></div>
     </div>
     <script src="./main.js"></script>
   </body>
